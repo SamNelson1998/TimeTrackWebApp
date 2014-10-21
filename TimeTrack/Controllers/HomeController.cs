@@ -10,7 +10,6 @@ namespace TimeTracker.Controllers
     {
         public ActionResult Index()
         {
-
             return View();
         }
     }
