@@ -18,7 +18,7 @@ namespace TimeTrack.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Time.ToList());
+            return View(db.TimeModels.ToList());
         }
 
         //
@@ -26,7 +26,7 @@ namespace TimeTrack.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            TimeModels timemodels = db.Time.Find(id);
+            TimeModels timemodels = db.TimeModels.Find(id);
             if (timemodels == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace TimeTrack.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Time.Add(timemodels);
+                db.TimeModels.Add(timemodels);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -64,7 +64,7 @@ namespace TimeTrack.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            TimeModels timemodels = db.Time.Find(id);
+            TimeModels timemodels = db.TimeModels.Find(id);
             if (timemodels == null)
             {
                 return HttpNotFound();
@@ -93,7 +93,7 @@ namespace TimeTrack.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            TimeModels timemodels = db.Time.Find(id);
+            TimeModels timemodels = db.TimeModels.Find(id);
             if (timemodels == null)
             {
                 return HttpNotFound();
@@ -108,8 +108,8 @@ namespace TimeTrack.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            TimeModels timemodels = db.Time.Find(id);
-            db.Time.Remove(timemodels);
+            TimeModels timemodels = db.TimeModels.Find(id);
+            db.TimeModels.Remove(timemodels);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

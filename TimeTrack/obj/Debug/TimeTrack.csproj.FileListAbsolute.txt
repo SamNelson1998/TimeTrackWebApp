@@ -152,6 +152,6 @@ C:\Users\snelson\Documents\GitHub\TimeTrackWebApp\TimeTrack\bin\ko\System.Spatia
 C:\Users\snelson\Documents\GitHub\TimeTrackWebApp\TimeTrack\bin\ru\System.Spatial.resources.dll
 C:\Users\snelson\Documents\GitHub\TimeTrackWebApp\TimeTrack\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\snelson\Documents\GitHub\TimeTrackWebApp\TimeTrack\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\snelson\Documents\GitHub\TimeTrackWebApp\TimeTrack\obj\Debug\TimeTrack.csprojResolveAssemblyReference.cache
 C:\Users\snelson\Documents\GitHub\TimeTrackWebApp\TimeTrack\obj\Debug\TimeTrack.dll
 C:\Users\snelson\Documents\GitHub\TimeTrackWebApp\TimeTrack\obj\Debug\TimeTrack.pdb
+C:\Users\snelson\Documents\GitHub\TimeTrackWebApp\TimeTrack\obj\Debug\TimeTrack.csprojResolveAssemblyReference.cache

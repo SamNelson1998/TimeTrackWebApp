@@ -21,6 +21,6 @@ namespace TimeTrack.Models
     }
     public class TimeDBContext : DbContext
     {
-        public DbSet<TimeModels> Time { get; set; }
+        public DbSet<TimeModels> TimeModels { get; set; }
     }
 }
