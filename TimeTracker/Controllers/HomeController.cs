@@ -11,39 +11,35 @@ namespace TimeTracker.Controllers
     {
         public ActionResult Index()
         {
-            using (SqlConnection connection = new SqlConnection("connection string"))
+            using (SqlConnection connection = new SqlConnection("Data Source=ew-db\\dev;Initial Catalog=TimeTracker;Integrated Security=True; User ID=UserName;Password=Password"))
             {
                 try
                 {
                     connection.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT TOP 1 * FROM User"))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                for (int i = 0; i < reader.FieldCount; i++)
+                                {
+                                    Console.WriteLine(reader.GetValue(i));
+                                }
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    //SqlCommand command = new SqlCommand();
 
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine(e.ToString());
 
                 }
 
-
             }
-
-
-
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your app description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
