@@ -217,6 +217,16 @@ ul#menu {
     background-color: #fff;
 }
 
+    .feature .content-wrap-body {
+        background-color: #F7FBFC;
+        background-image: -ms-linear-gradient(left, #ddedf4 0%, #f7fbfc 100%);
+        background-image: -o-linear-gradient(left, #ddedf4 0%, #f7fbfc 100%);
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #ddedf4), color-stop(1, #f7fbfc));
+        background-image: -webkit-linear-gradient(left, #ddedf4 0%, #f7fbfc 100%);
+        background-image: linear-gradient(left, #ddedf4 0%, #f7fbfc 100%);
+        padding: 20px 40px 30px 40px;
+    }
+
     .featured .content-wrapper {
         background-color: #044E73;
         background-image: -ms-linear-gradient(left, #044E73 0%, #217FB6 100%);
@@ -224,7 +234,6 @@ ul#menu {
         background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #044E73), color-stop(1, #217FB6));
         background-image: -webkit-linear-gradient(left, #044E73 0%, #217FB6 100%);
         background-image: linear-gradient(left, #044E73 0%, #217FB6 100%);
-        color: #fff;
         padding: 20px 40px 30px 40px;
     }
 
@@ -234,7 +243,7 @@ ul#menu {
 
         .featured p {
             font-size: 1.1em;
-            color: #fff;
+            color: #000;
         }
 
         .featured a {

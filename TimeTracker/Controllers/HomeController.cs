@@ -16,7 +16,7 @@ namespace TimeTracker.Controllers
                 try
                 {
                     connection.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT TOP 1 * FROM User"))
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[User];", connection))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
