@@ -153,6 +153,6 @@ C:\Users\snelson\Documents\Visual Studio 2012\Projects\TimeTrackWebApp\TimeTrack
 C:\Users\snelson\Documents\Visual Studio 2012\Projects\TimeTrackWebApp\TimeTracker\bin\ru\System.Spatial.resources.dll
 C:\Users\snelson\Documents\Visual Studio 2012\Projects\TimeTrackWebApp\TimeTracker\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\snelson\Documents\Visual Studio 2012\Projects\TimeTrackWebApp\TimeTracker\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\snelson\Documents\Visual Studio 2012\Projects\TimeTrackWebApp\TimeTracker\obj\Debug\TimeTracker.csprojResolveAssemblyReference.cache
 C:\Users\snelson\Documents\Visual Studio 2012\Projects\TimeTrackWebApp\TimeTracker\obj\Debug\TimeTracker.dll
 C:\Users\snelson\Documents\Visual Studio 2012\Projects\TimeTrackWebApp\TimeTracker\obj\Debug\TimeTracker.pdb
+C:\Users\snelson\Documents\Visual Studio 2012\Projects\TimeTrackWebApp\TimeTracker\obj\Debug\TimeTracker.csprojResolveAssemblyReference.cache

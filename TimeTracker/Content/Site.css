@@ -225,6 +225,7 @@ ul#menu {
         background-image: -webkit-linear-gradient(left, #ddedf4 0%, #f7fbfc 100%);
         background-image: linear-gradient(left, #ddedf4 0%, #f7fbfc 100%);
         padding: 20px 40px 30px 40px;
+        color: #000;
     }
 
     .featured .content-wrapper {
@@ -772,4 +773,44 @@ tr.pager td {
         footer p {
             margin: 0;
         }
+
+/*********************************************************************************/
+/* Button Style                                                                  */
+/*********************************************************************************/
+
+	.button
+	{
+		display: inline-block;
+		padding: 0em 3em;
+		background: #0066CC;
+		letter-spacing: 0.20em;
+		line-height: 4em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1em;
+		color: #FFF;
+	}
+    
+    .button:before
+	{
+		display: inline-block;
+		background: #FFC31F;
+		margin-right: 1em;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 20px;
+		text-align: center;
+		color: #272925;
+	}
+
+    ul.actions
+	{
+		text-align: center;
+	}
+		
+		ul.actions li
+		{
+		}
 }

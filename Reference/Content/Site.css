@@ -228,6 +228,7 @@ ul#menu {
         }
 
         .featured p {
+	    color: #000;
             font-size: 1.1em;
         }
 

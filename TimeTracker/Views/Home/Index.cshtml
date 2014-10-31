@@ -1,6 +1,11 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+
+@section Style {
+    <link href="@Url.Content("~/Content/css")" rel="stylesheet" type="text/css" />
+}
+
 @section featured {
     <section class="featured">
         <div class="content-wrapper">
@@ -10,13 +15,6 @@
         </div>
     </section>
 }
-
-<section class="featured">
-    <div class="content-wrap-body">
-        <p class="p">
-            Eleven Winds Time Tracking web application allows the employees 
-            at Eleven Winds to, record how many hours they worked each day, 
-            and what they worked on each day.
-        </p>
-    </div>
-</section>
+<ul class="actions">
+    <li><a href="Register" class="button")">Register</a></li>
+</ul>
