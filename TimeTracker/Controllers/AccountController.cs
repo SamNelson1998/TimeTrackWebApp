@@ -270,6 +270,7 @@ namespace TimeTracker.Controllers
                     if (user == null)
                     {
                         // Insert name into the profile table
+
                         db.UserProfiles.Add(new UserProfile { UserName = model.UserName });
                         db.SaveChanges();
 

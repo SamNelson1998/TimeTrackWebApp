@@ -11,34 +11,38 @@ namespace TimeTracker.Controllers
     {
         public ActionResult Index()
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=ew-db\\dev;Initial Catalog=TimeTracker;Integrated Security=True; User ID=UserName;Password=Password"))
+            if (Request.IsAuthenticated)
             {
-                try
+                using (SqlConnection connection = new SqlConnection("Data Source=ew-db\\dev;Initial Catalog=TimeTracker;Integrated Security=True; User ID=UserName;Password=Password"))
                 {
-                    connection.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[User];", connection))
+                    try
                     {
-                        using (SqlDataReader reader = command.ExecuteReader())
+                        connection.Open();
+                        using (SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[User];", connection))
                         {
-                            while (reader.Read())
+                            using (SqlDataReader reader = command.ExecuteReader())
                             {
-                                for (int i = 0; i < reader.FieldCount; i++)
+                                while (reader.Read())
                                 {
-                                    Console.WriteLine(reader.GetValue(i));
+                                    for (int i = 0; i < reader.FieldCount; i++)
+                                    {
+                                        Console.WriteLine(reader.GetValue(i));
+                                    }
+                                    Console.WriteLine();
                                 }
-                                Console.WriteLine();
                             }
                         }
+                        //SqlCommand command = new SqlCommand();
                     }
-                    //SqlCommand command = new SqlCommand();
-
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.ToString());
+                    }
                 }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.ToString());
-
-                }
-
+            }
+            else
+            {
+                return View();
             }
             return View();
         }
