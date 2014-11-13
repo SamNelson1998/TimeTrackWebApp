@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.SqlClient;
 using TimeTracker.Models;
 
 namespace TimeTracker.Controllers
@@ -12,38 +12,30 @@ namespace TimeTracker.Controllers
     {
         public ActionResult Index()
         {
-            if (Request.IsAuthenticated)
+            using (SqlConnection connection = new SqlConnection("Data Source=ew-db\\dev;Initial Catalog=TimeTracker;Integrated Security=True; User ID=UserName;Password=Password"))
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=ew-db\\dev;Initial Catalog=TimeTracker;Integrated Security=True; User ID=UserName;Password=Password"))
+                try
                 {
-                    try
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[User];", connection))
                     {
-                        connection.Open();
-                        using (SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[User];", connection))
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            using (SqlDataReader reader = command.ExecuteReader())
+                            while (reader.Read())
                             {
-                                while (reader.Read())
+                                for (int i = 0; i < reader.FieldCount; i++)
                                 {
-                                    for (int i = 0; i < reader.FieldCount; i++)
-                                    {
-                                        Console.WriteLine(reader.GetValue(i));
-                                    }
-                                    Console.WriteLine();
+                                    Console.WriteLine(reader.GetValue(i));
                                 }
+                                Console.WriteLine();
                             }
                         }
-                        //SqlCommand command = new SqlCommand();
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.ToString());
                     }
                 }
-            }
-            else
-            {
-                return View();
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
             }
             return View();
         }

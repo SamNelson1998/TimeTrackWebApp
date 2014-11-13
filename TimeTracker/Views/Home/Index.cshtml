@@ -1,30 +1,19 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model TimeTracker.Models.TimeModels
+
+@{
+    ViewBag.Title = "Home";
 }
 
-@section Style {
-    <link href="@Url.Content("~/Content/css")" rel="stylesheet" type="text/css" />
-}
+<h2>Home</h2>
 
-@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>Eleven Winds - Time Tracker</h1>
-            </hgroup>
-        </div>
-    </section>
-}
-<div class="float-left">
-    <section id="login">
-        @Html.Partial("_LoginPartial")
-    </section>
-</div>
+<p>Home test page</p>
 
-
-@*<form action="~/Account/Login">
-<input type="submit" value="Login">
-</form>
-<form action="~/Account/Register">
-<input type="submit" value="Register">
-</form>*@
+<ol>
+    <li>
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+    </li>
+    <li>
+        @Html.Label("Role:")        
+    </li>
+</ol>
