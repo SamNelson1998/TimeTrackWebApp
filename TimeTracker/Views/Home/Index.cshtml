@@ -6,14 +6,10 @@
 
 <h2>Home</h2>
 
-<p>Home test page</p>
-
-<ol>
-    <li>
-        @Html.LabelFor(m => m.Name)
-        @Html.TextBoxFor(m => m.Name)
-    </li>
-    <li>
-        @Html.Label("Role:")        
-    </li>
-</ol>
+<li>
+    @Html.Label("Role: ")
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+    @Html.LabelFor(m => m.Hours)
+    @Html.TextBoxFor(m => m.Hours)
+</li>
