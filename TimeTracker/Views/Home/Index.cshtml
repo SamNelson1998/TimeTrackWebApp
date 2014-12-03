@@ -6,10 +6,9 @@
 
 <h2>Home</h2>
 
-<li>
-    @Html.Label("Role: ")
+    @Html.LabelFor(m => m.Role)
+    @Html.TextBoxFor(m => m.Role)
     @Html.LabelFor(m => m.Name)
     @Html.TextBoxFor(m => m.Name)
     @Html.LabelFor(m => m.Hours)
     @Html.TextBoxFor(m => m.Hours)
-</li>

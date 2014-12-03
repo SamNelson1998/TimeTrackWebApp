@@ -20,6 +20,7 @@ namespace TimeTracker.Models
         public string Description { get; set; }
         public int IssueID { get; set; }
     }
+
     public class TimeModelsContext : DbContext
     {
         public DbSet<TimeModels> Time { get; set; }

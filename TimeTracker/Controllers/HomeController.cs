@@ -13,10 +13,11 @@ namespace TimeTracker.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=ew-db\\dev;Initial Catalog=TimeTracker;Integrated Security=True; User ID=UserName;Password=Password"))
+            using (SqlConnection connection = new SqlConnection("Data Source=ew-db\\dev;Initial Catalog=TimeTracker;Integrated Security=True;User ID=UserName;Password=Password"))
             {
                 try
                 {
+                    SqlConnection.ClearPool(connection);
                     connection.Open();
                     using (SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[User];", connection))
                     {

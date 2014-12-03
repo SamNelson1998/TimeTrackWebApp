@@ -93,7 +93,7 @@ namespace TimeTracker.Models
 
         [Required]
         [Display(Name = "Role")]
-        public 
+        public string Role { get; set; }
     }
 
     public class ExternalLogin
