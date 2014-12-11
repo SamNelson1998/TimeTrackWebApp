@@ -6,6 +6,7 @@
 
 body {
     background-color: #fff;
+    background: #fff url("wind.png") no-repeat;
     color: #333;
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
@@ -104,17 +105,12 @@ h5, h6 {
 }
 
     .main-content {
-        background: url("../Images/accent.png") no-repeat;
         padding-left: 10px;
         padding-top: 30px;
     }
 
-    .featured + .main-content {
-        background: url("../Images/heroAccent.png") no-repeat;
-    }
-
 header .content-wrapper {
-    padding-top: 20px; 
+    padding-top: 0px; 
 }
 
 footer {
@@ -136,6 +132,8 @@ footer {
     font-size: 2.3em;
     margin: 0;
     text-decoration: none;
+    pointer-events: none;
+    
 }
 
 .site-title a, .site-title a:hover, .site-title a:active {
@@ -145,6 +143,7 @@ footer {
     color: #c8c8c8;
     outline: none;
     text-decoration: none;
+    pointer-events: painted;
 }
 
 
