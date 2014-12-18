@@ -2,9 +2,12 @@
     ViewBag.Title = "Time";
 }
 
-<h2>Time</h2>
-
 <style scoped>
+    caption {
+        font-size: 160%;
+        padding-bottom: 5px;
+        text-align: left;
+    }
     p {
         color: black;
     }
@@ -42,11 +45,57 @@
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+    padding: 5px;
+    text-align: left;    
+}
+
 </style>
 
 @if (User.Identity.IsAuthenticated)
 {
-    <p class="paragraph1">Hello @User.Identity.Name, these are your hours worked this week.</p>
+    <p class="paragraph1">Hello @User.Identity.Name, these are the hours you worked this week.</p>
+    <table style="width:100%">
+        <caption>Weekly Hours</caption>
+        <tr>
+            <th>Day</th>
+            <th>Hours</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td></td>
+        </tr>
+    </table>
     
 }
 else
